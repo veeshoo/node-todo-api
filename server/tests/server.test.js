@@ -8,6 +8,22 @@ beforeEach((done) => {
     Todo.remove({}).then(() => done());
 });
 
+describe('GET /todos', () => {
+    it('should get all the todos', (done) => {
+        Todo.insertMany([{text: "First todo"}, {text: "Second todo"}]);
+
+        request(app)
+            .get('/todos')
+            .expect(200)
+            .expect((res) => {
+                console.log(res.body);
+                console.log("*****************************************************");
+                expect(res.body.length).toBe(3);
+            });
+            done();
+    })
+});
+
 describe('POST /todos', () => {
     it('should create a new todo', (done) => {
         var text = 'Test todo text';
