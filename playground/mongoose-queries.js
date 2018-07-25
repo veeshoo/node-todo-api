@@ -17,7 +17,7 @@ User.findById(id).then((user) => {
 // var id = '5b575e4d1fbe4330218ce3f91';
 
 // if(!ObjectID.isValid(id)){
-//     console.log('ObjectId not valid');
+//     console.log('ObjectID not valid');
 // }
 
 // Todo.find({
