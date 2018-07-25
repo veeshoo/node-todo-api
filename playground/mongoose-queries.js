@@ -1,4 +1,4 @@
-const {ObjectId} = require('mongodb');
+const {ObjectID} = require('mongodb');
 
 const {mongoose} = require('./../server/db/mongoose');
 const {Todo} = require('./../server/models/todo');
@@ -16,7 +16,7 @@ User.findById(id).then((user) => {
 
 // var id = '5b575e4d1fbe4330218ce3f91';
 
-// if(!ObjectId.isValid(id)){
+// if(!ObjectID.isValid(id)){
 //     console.log('ObjectId not valid');
 // }
 
